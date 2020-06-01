@@ -1,0 +1,6 @@
+{
+  "name": "@shafeh/tanach",
+  "version": "1.0.0",
+  "description": "Tanach API",
+  "main": "index.js"
+}
