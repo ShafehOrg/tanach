@@ -1,15 +1,34 @@
-exports.sections = function () {
-  return ["Torah", "Neviim", "Kesuvim"];
+const fs = require('fs');
+
+const sections = ["Torah", "Neviim", "Kesuvim"];
+
+const torah = () => {
+  return sections[0];
 }
 
-exports.torah = function () {
-  return "Torah"
+const neviim = function () {
+  return sections[1];
 }
 
-exports.neviim = function () {
-  return "Neviim";
+const kesuvim = function () {
+  return sections[2];
 }
 
-exports.kesuvim = function () {
-  return "Kesuvim";
+const tanach = function (sefer, perek, pasuk) {
+  let data = fs.readFileSync('tanach.json');
+  let tanach = JSON.parse(data);
+  
+  var result = tanach.filter(el => {
+    return el.seferHe === sefer &&
+      el.perekNum === perek &&
+      el.pasuknum === pasuk;
+  });
+
+  return result;
 }
+
+exports.sections = sections;
+exports.torah = torah;
+exports.neviim = neviim;
+exports.kesuvim = kesuvim;
+exports.tanach = tanach;
