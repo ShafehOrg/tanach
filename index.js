@@ -1,5 +1,4 @@
-const fs = require('fs');
-
+const { text } = require("./tanach.js");
 const sections = ["Torah", "Neviim", "Kesuvim"];
 
 const torah = () => {
@@ -14,11 +13,8 @@ const kesuvim = function () {
   return sections[2];
 }
 
-const tanach = function (sefer, perek, pasuk) {
-  let data = fs.readFileSync('tanach.json');
-  let tanach = JSON.parse(data);
-  
-  var result = tanach.filter(el => {
+const tanach = function (sefer, perek, pasuk) {  
+  var result = text.filter(el => {
     return el.seferHe === sefer &&
       el.perekNum === perek &&
       el.pasuknum === pasuk;
