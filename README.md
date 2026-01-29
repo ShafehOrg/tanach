@@ -112,6 +112,41 @@ npm run build
 npm run test:watch
 ```
 
+## Publishing
+
+### Automated Publishing (GitHub Actions)
+
+The package is automatically published to npm when:
+
+1. **Release is created**: Create a new release on GitHub, and the package will be automatically published
+2. **Manual trigger**: Go to Actions → "Publish to npm" → Run workflow
+
+### Prerequisites
+
+Set up the `NPM_TOKEN` secret in your GitHub repository:
+
+1. Generate an npm access token at https://www.npmjs.com/settings/[username]/tokens
+2. Add it as a repository secret named `NPM_TOKEN`
+3. Ensure the token has publish permissions
+
+### Manual Publishing
+
+```bash
+# Bump version
+npm version patch|minor|major
+
+# Build and publish
+npm run build
+npm publish --access public
+```
+
+## CI/CD
+
+The repository includes two GitHub Actions workflows:
+
+- **CI** (`.github/workflows/ci.yml`): Runs tests on Node.js 18, 20, and 22 for all PRs and pushes to main
+- **Publish** (`.github/workflows/npm-publish.yml`): Publishes package to npm on releases
+
 ## Data Format
 
 The library uses an optimized compressed format that reduces file size by ~25% compared to the original flat array structure. Data is nested by book and chapter for efficient lookups.
