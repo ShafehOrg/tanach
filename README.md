@@ -125,9 +125,24 @@ The package is automatically published to npm when:
 
 Set up the `NPM_TOKEN` secret in your GitHub repository:
 
-1. Generate an npm access token at https://www.npmjs.com/settings/[username]/tokens
-2. Add it as a repository secret named `NPM_TOKEN`
-3. Ensure the token has publish permissions
+1. **Generate an npm access token** at https://www.npmjs.com/settings/[username]/tokens
+   - Create a **Granular Access Token** (recommended) with:
+     - **Packages and scopes**: Read and write permissions for your package
+     - **Organizations**: Select your organization (if applicable)
+     - **Expiration**: Set desired expiration (max 90 days)
+     - ⚠️ **Important**: Enable "Bypass 2FA requirement when publishing" if you have 2FA enabled
+   - Or use an **Automation Token** (legacy, but simpler for CI/CD)
+
+2. **Add the token to GitHub**:
+   - Go to your repository → Settings → Secrets and variables → Actions
+   - Click "New repository secret"
+   - Name: `NPM_TOKEN`
+   - Value: Paste your npm token
+
+3. **Important Notes**:
+   - Granular tokens expire in max 90 days - you'll need to regenerate periodically
+   - Automation tokens require 2FA enabled on your npm account
+   - The workflow uses `--provenance` for enhanced security and trust
 
 ### Manual Publishing
 
@@ -139,6 +154,10 @@ npm version patch|minor|major
 npm run build
 npm publish --access public
 ```
+
+### Troubleshooting
+
+If you encounter publishing errors (403 Forbidden, 2FA issues, etc.), see [PUBLISHING.md](./PUBLISHING.md) for detailed troubleshooting steps and solutions.
 
 ## CI/CD
 
