@@ -1,13 +1,49 @@
 {
   "name": "@shafeh/tanach",
-  "version": "0.1.2",
-  "description": "Tanach API",
-  "main": "index.js",
-  "scripts": {
-    "test": "mocha --reporter spec --verbose=true"
+  "version": "0.2.0",
+  "description": "Modern TypeScript API for accessing the complete Hebrew Bible (Tanach) text",
+  "type": "module",
+  "main": "./dist/tanach.cjs.js",
+  "module": "./dist/tanach.es.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/tanach.es.js",
+      "require": "./dist/tanach.cjs.js",
+      "types": "./dist/index.d.ts"
+    }
   },
-  "dependencies": {
-    "chai": "^4.2.0",
-    "mocha": "^7.2.0"
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "convert": "node scripts/convert-data.cjs",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "tanach",
+    "torah",
+    "bible",
+    "hebrew",
+    "judaism",
+    "scripture"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.11.5",
+    "@vitest/coverage-v8": "^1.2.1",
+    "terser": "^5.46.0",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.12",
+    "vitest": "^1.2.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
