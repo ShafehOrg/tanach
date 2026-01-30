@@ -539,7 +539,7 @@ export const preferredVerses: PreferredVerse[] = [
   {
     "startLetter": "ד",
     "endLetter": "ל",
-    "book": "Bereishis",
+    "book": "Bereishit",
     "chapter": 49,
     "verse": 16
   },
@@ -588,14 +588,14 @@ export const preferredVerses: PreferredVerse[] = [
   {
     "startLetter": "ד",
     "endLetter": "ק",
-    "book": "Shemos",
+    "book": "Shemot",
     "chapter": 16,
     "verse": 14
   },
   {
     "startLetter": "ד",
     "endLetter": "ר",
-    "book": "Shemos",
+    "book": "Shemot",
     "chapter": 1,
     "verse": 4
   },
@@ -903,14 +903,14 @@ export const preferredVerses: PreferredVerse[] = [
   {
     "startLetter": "ו",
     "endLetter": "ר",
-    "book": "Bereishis",
+    "book": "Bereishit",
     "chapter": 1,
     "verse": 3
   },
   {
     "startLetter": "ו",
     "endLetter": "ש",
-    "book": "Bereishis",
+    "book": "Bereishit",
     "chapter": 27,
     "verse": 28
   },
@@ -980,7 +980,7 @@ export const preferredVerses: PreferredVerse[] = [
   {
     "startLetter": "ז",
     "endLetter": "ט",
-    "book": "Koheles",
+    "book": "Kohelet",
     "chapter": 10,
     "verse": 1
   },
@@ -1015,7 +1015,7 @@ export const preferredVerses: PreferredVerse[] = [
   {
     "startLetter": "ז",
     "endLetter": "ן",
-    "book": "Bereishis",
+    "book": "Bereishit",
     "chapter": 49,
     "verse": 13
   },
@@ -1092,7 +1092,7 @@ export const preferredVerses: PreferredVerse[] = [
   {
     "startLetter": "ח",
     "endLetter": "ג",
-    "book": "Shemos",
+    "book": "Shemot",
     "chapter": 10,
     "verse": 9
   },
@@ -1211,7 +1211,7 @@ export const preferredVerses: PreferredVerse[] = [
   {
     "startLetter": "ח",
     "endLetter": "ש",
-    "book": "Koheles",
+    "book": "Kohelet",
     "chapter": 10,
     "verse": 8
   },
@@ -1239,7 +1239,7 @@ export const preferredVerses: PreferredVerse[] = [
   {
     "startLetter": "ט",
     "endLetter": "ד",
-    "book": "Koheles",
+    "book": "Kohelet",
     "chapter": 4,
     "verse": 13
   },
@@ -1260,7 +1260,7 @@ export const preferredVerses: PreferredVerse[] = [
   {
     "startLetter": "ט",
     "endLetter": "ח",
-    "book": "Koheles",
+    "book": "Kohelet",
     "chapter": 7,
     "verse": 8
   },
@@ -1337,7 +1337,7 @@ export const preferredVerses: PreferredVerse[] = [
   {
     "startLetter": "ט",
     "endLetter": "ש",
-    "book": "Koheles",
+    "book": "Kohelet",
     "chapter": 7,
     "verse": 11
   },
@@ -1659,7 +1659,7 @@ export const preferredVerses: PreferredVerse[] = [
   {
     "startLetter": "ל",
     "endLetter": "ב",
-    "book": "Bereishis",
+    "book": "Bereishit",
     "chapter": 27,
     "verse": 9
   },
@@ -1743,7 +1743,7 @@ export const preferredVerses: PreferredVerse[] = [
   {
     "startLetter": "ל",
     "endLetter": "ן",
-    "book": "Shemos",
+    "book": "Shemot",
     "chapter": 25,
     "verse": 27
   },
@@ -1841,7 +1841,7 @@ export const preferredVerses: PreferredVerse[] = [
   {
     "startLetter": "מ",
     "endLetter": "ח",
-    "book": "Bereishis",
+    "book": "Bereishit",
     "chapter": 10,
     "verse": 11
   },
@@ -1932,7 +1932,7 @@ export const preferredVerses: PreferredVerse[] = [
   {
     "startLetter": "מ",
     "endLetter": "ש",
-    "book": "Koheles",
+    "book": "Kohelet",
     "chapter": 1,
     "verse": 3
   },
@@ -2002,7 +2002,7 @@ export const preferredVerses: PreferredVerse[] = [
   {
     "startLetter": "נ",
     "endLetter": "ט",
-    "book": "Shemos",
+    "book": "Shemot",
     "chapter": 39,
     "verse": 29
   },
@@ -2163,7 +2163,7 @@ export const preferredVerses: PreferredVerse[] = [
   {
     "startLetter": "ס",
     "endLetter": "ל",
-    "book": "Shemos",
+    "book": "Shemot",
     "chapter": 29,
     "verse": 3
   },
@@ -2219,7 +2219,7 @@ export const preferredVerses: PreferredVerse[] = [
   {
     "startLetter": "ס",
     "endLetter": "ת",
-    "book": "Koheles",
+    "book": "Kohelet",
     "chapter": 7,
     "verse": 25
   },
@@ -2338,7 +2338,7 @@ export const preferredVerses: PreferredVerse[] = [
   {
     "startLetter": "ע",
     "endLetter": "ף",
-    "book": "Shemos",
+    "book": "Shemot",
     "chapter": 38,
     "verse": 10
   },
@@ -2387,7 +2387,7 @@ export const preferredVerses: PreferredVerse[] = [
   {
     "startLetter": "פ",
     "endLetter": "ב",
-    "book": "Shemos",
+    "book": "Shemot",
     "chapter": 28,
     "verse": 34
   },
@@ -2429,7 +2429,7 @@ export const preferredVerses: PreferredVerse[] = [
   {
     "startLetter": "פ",
     "endLetter": "ח",
-    "book": "Bereishis",
+    "book": "Bereishit",
     "chapter": 2,
     "verse": 7
   },
@@ -2541,7 +2541,7 @@ export const preferredVerses: PreferredVerse[] = [
   {
     "startLetter": "צ",
     "endLetter": "ג",
-    "book": "Bereishis",
+    "book": "Bereishit",
     "chapter": 30,
     "verse": 38
   },
@@ -2618,7 +2618,7 @@ export const preferredVerses: PreferredVerse[] = [
   {
     "startLetter": "צ",
     "endLetter": "פ",
-    "book": "Shemos",
+    "book": "Shemot",
     "chapter": 37,
     "verse": 11
   },
@@ -2660,7 +2660,7 @@ export const preferredVerses: PreferredVerse[] = [
   {
     "startLetter": "ק",
     "endLetter": "א",
-    "book": "Shemos",
+    "book": "Shemot",
     "chapter": 13,
     "verse": 2
   },
@@ -2765,7 +2765,7 @@ export const preferredVerses: PreferredVerse[] = [
   {
     "startLetter": "ק",
     "endLetter": "ק",
-    "book": "Bereishis",
+    "book": "Bereishit",
     "chapter": 49,
     "verse": 10
   },
@@ -2835,14 +2835,14 @@ export const preferredVerses: PreferredVerse[] = [
   {
     "startLetter": "ר",
     "endLetter": "ז",
-    "book": "Bereishis",
+    "book": "Bereishit",
     "chapter": 49,
     "verse": 3
   },
   {
     "startLetter": "ר",
     "endLetter": "ח",
-    "book": "Koheles",
+    "book": "Kohelet",
     "chapter": 1,
     "verse": 14
   },
@@ -2884,7 +2884,7 @@ export const preferredVerses: PreferredVerse[] = [
   {
     "startLetter": "ר",
     "endLetter": "ן",
-    "book": "Koheles",
+    "book": "Kohelet",
     "chapter": 7,
     "verse": 27
   },
@@ -2905,7 +2905,7 @@ export const preferredVerses: PreferredVerse[] = [
   {
     "startLetter": "ר",
     "endLetter": "ץ",
-    "book": "Koheles",
+    "book": "Kohelet",
     "chapter": 10,
     "verse": 7
   },
@@ -2940,7 +2940,7 @@ export const preferredVerses: PreferredVerse[] = [
   {
     "startLetter": "ש",
     "endLetter": "ב",
-    "book": "Bereishis",
+    "book": "Bereishit",
     "chapter": 2,
     "verse": 11
   },
