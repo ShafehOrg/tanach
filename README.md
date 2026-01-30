@@ -6,12 +6,12 @@ Modern TypeScript library for accessing the complete Hebrew Bible (Tanach) text.
 
 ## Features
 
-- 📖 Complete Tanach text (Torah, Neviim, Kesuvim)
-- 🚀 Modern ES modules with TypeScript support
-- 📦 Optimized data format (25% smaller than original)
-- 🔍 Type-safe API
-- 🌐 Works in Node.js and browsers
-- 📝 Full test coverage
+- Complete Tanach text (Torah, Neviim, Kesuvim)
+- Modern ES modules with TypeScript support
+- Optimized data format (25% smaller than original)
+- Type-safe API
+- Works in Node.js and browsers
+- Full test coverage
 
 ## Installation
 
@@ -77,6 +77,111 @@ Array of the three main sections: `['Torah', 'Neviim', 'Kesuvim']`
 
 Helper functions that return section names.
 
+### `extractHebrewLetters(text: string)`
+
+Extract only Hebrew letters from text, removing nekudot (vowel points) and cantillation marks.
+
+**Parameters:**
+- `text` - Hebrew text with diacritical marks
+
+**Returns:** `string` - Text with only Hebrew letters
+
+**Example:**
+```typescript
+extractHebrewLetters("בְּרֵאשִׁ֖ית"); // Returns "בראשית"
+```
+
+### `findPesukimByStartingLetter(letter: string, options?)`
+
+Find all verses that begin with a specific Hebrew letter.
+
+**Parameters:**
+- `letter` - Hebrew letter to search for (e.g., "א", "ב")
+- `options.books` - Optional array of book names to limit search
+- `options.maxResults` - Optional maximum number of results
+
+**Returns:** `VerseResult[]`
+
+**Example:**
+```typescript
+// Find all verses starting with aleph
+const verses = findPesukimByStartingLetter("א");
+
+// Find verses starting with bet in Torah books only
+const verses = findPesukimByStartingLetter("ב", {
+  books: ["Bereishit", "Shemot", "Vayikra", "Bamidbar", "Devarim"]
+});
+
+// Find first 50 verses starting with gimmel
+const verses = findPesukimByStartingLetter("ג", { maxResults: 50 });
+```
+
+### `findPesukimByName(startLetter: string, endLetter: string, options?)`
+
+Find all verses that begin with one Hebrew letter and end with another. This is commonly used for the minhag (custom) of saying a pasuk for one's name in Shemona Esre (the Amidah prayer).
+
+**Parameters:**
+- `startLetter` - Hebrew letter the verse should start with
+- `endLetter` - Hebrew letter the verse should end with
+- `options.books` - Optional array of book names to limit search
+- `options.maxResults` - Optional maximum number of results
+
+**Returns:** `VerseResult[]`
+
+**Example:**
+```typescript
+// Find verses for the name "David" (דוד - starts with dalet, ends with dalet)
+const verses = findPesukimByName("ד", "ד");
+
+// Find verses for the name "Avraham" (אברהם - starts with aleph, ends with mem)
+const verses = findPesukimByName("א", "ם");
+
+// Search only in Tehillim (Psalms)
+const verses = findPesukimByName("י", "ה", { books: ["Tehillim"] });
+```
+
+**Note:** This function correctly handles Hebrew final forms (ך, ם, ן, ף, ץ) when matching end letters. Results are automatically sorted with preferred/traditional verses first.
+
+### `getPreferredPasukForName(startLetter: string, endLetter: string)`
+
+Get the traditional/preferred pasuk for a given name. This returns the verse from traditional lists that is commonly used for the minhag.
+
+**Parameters:**
+- `startLetter` - First letter of the name
+- `endLetter` - Last letter of the name
+
+**Returns:** `VerseResult | null` - The preferred verse with `preferred: true`, or null if none exists
+
+**Example:**
+```typescript
+// Get the traditional verse for "David" (דוד)
+const verse = getPreferredPasukForName("ד", "ד");
+if (verse) {
+  console.log(`${verse.book} ${verse.chapter}:${verse.verse}`);
+  console.log(verse.text);
+  console.log(verse.preferred); // true
+}
+
+// Get all options including the preferred one
+const allVerses = findPesukimByName("א", "א");
+const preferred = allVerses.find(v => v.preferred);
+// The preferred verse is automatically sorted first in the results
+```
+
+## Preferred Verses
+
+The library includes a curated list of traditional verses for the minhag of saying a pasuk for one's name. These verses are:
+
+- Automatically marked with `preferred: true` in search results
+- Sorted first in `findPesukimByName()` results
+- Accessible directly via `getPreferredPasukForName()`
+- Based on traditional lists used in various Jewish communities
+
+You can extend the preferred verses list by editing `scripts/preferred-verses-input.json` and running:
+```bash
+node scripts/process-preferred-verses.cjs
+```
+
 ## Types
 
 ```typescript
@@ -87,6 +192,7 @@ interface VerseResult {
   chapter: number;
   verse: number;
   text: string;
+  preferred?: boolean;  // True if this is a traditional/preferred verse for a name
 }
 
 interface BookMeta {

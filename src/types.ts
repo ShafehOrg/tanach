@@ -58,4 +58,6 @@ export interface VerseResult {
   chapter: number;
   verse: number;
   text: string;
+  /** Whether this verse is a preferred/traditional choice for a name */
+  preferred?: boolean;
 }
