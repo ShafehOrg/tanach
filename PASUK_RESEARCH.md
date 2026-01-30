@@ -153,9 +153,54 @@ Psalm 119 is the longest chapter in the Bible and features a unique alphabetic a
 - [Bet (Vet) - The second letter of the Hebrew alphabet - Chabad.org](https://www.chabad.org/library/article_cdo/aid/137074/jewish/Bet-Vet.htm)
 - [Hebrew Letters and Their Meanings - Betemunah](https://www.betemunah.org/letters.html)
 
+## Implementation
+
+### Phase 1 (January 30, 2026)
+- Basic letter search functionality (`findPesukimByStartingLetter`, `findPesukimByName`)
+- Hebrew letter extraction and normalization
+- Handling of final forms (sofit letters)
+- Comprehensive test coverage
+
+### Phase 2 (January 30, 2026)
+- **Preferred Verses System**: Integration of traditional/preferred verses from established lists
+- **Automatic Marking**: Search results automatically identify preferred verses with `preferred: true`
+- **Smart Sorting**: Preferred verses are automatically sorted first in results
+- **Direct Access**: `getPreferredPasukForName()` function for quick access to traditional choices
+- **Extensible Data**: JSON-based system allows easy addition of new preferred verses
+- **Community Sourcing**: Initial dataset includes verses from traditional Chabad and other community sources
+
+### Current Status
+- **22 letter combinations** with preferred verses (sample dataset)
+- Ready for expansion to complete aleph-bet (484 possible combinations)
+- Parsing system handles both Hebrew and English book references
+- Supports notes and alternative information for special cases
+
+### Adding More Preferred Verses
+
+To extend the preferred verses database:
+
+1. Edit `scripts/preferred-verses-input.json` to add new letter combinations
+2. Use format: `"א-א": ["verse text", "Book chapter verse"]`
+3. Run `node scripts/process-preferred-verses.cjs` to regenerate the TypeScript data
+4. The system automatically parses Hebrew numbers and book names
+
+Example:
+```json
+{
+  "allPesukim": [
+    {
+      "א-א": ["אָנָּא יְהֹוָה הוֹשִׁיעָה נָּא", "תהילים קיח כה"]
+    },
+    {
+      "ב-ב": ["בִּנְדָבָה אֶזְבְּחָה לָּךְ", "Psalms 54 8"]
+    }
+  ]
+}
+```
+
 ## Implementation Date
 
-This feature was implemented on January 30, 2026 for the `@shafeh/tanach` library.
+This feature was initially implemented on January 30, 2026, with preferred verses system added the same day.
 
 ## License
 

@@ -1,5 +1,6 @@
 import { data } from './data.js';
 import type { Section, VerseResult, TanachData } from './types.js';
+import { getPreferredVerse, normalizeHebrewLetter as normalizeLetter } from './preferred-verses.js';
 
 /**
  * The three main sections of the Tanach
@@ -318,6 +319,9 @@ export const findPesukimByName = (
   // For end letter, get all forms (regular and final)
   const endLetterAlternatives = getAllLetterForms(extractedEndLetter);
 
+  // Get preferred verse for this letter combination
+  const preferred = getPreferredVerse(searchStartLetter, normalizeLetter(extractedEndLetter));
+
   for (const bookName of booksToSearch) {
     const bookData = data[bookName];
     if (!bookData) continue;
@@ -329,13 +333,20 @@ export const findPesukimByName = (
         const lastLetter = lettersOnly[lettersOnly.length - 1];
 
         if (firstLetter === searchStartLetter && endLetterAlternatives.includes(lastLetter)) {
+          // Check if this is the preferred verse
+          const isPreferred = preferred &&
+            preferred.book === bookName &&
+            preferred.chapter === Number(chapterNum) &&
+            preferred.verse === verseNum;
+
           results.push({
             book: bookName,
             bookHebrew: bookData.meta.he,
             bookEnglish: bookData.meta.en,
             chapter: Number(chapterNum),
             verse: verseNum,
-            text
+            text,
+            preferred: isPreferred || undefined
           });
 
           if (maxResults && results.length >= maxResults) {
@@ -346,8 +357,64 @@ export const findPesukimByName = (
     }
   }
 
-  return results;
+  // Sort results so preferred verse comes first
+  return results.sort((a, b) => {
+    if (a.preferred && !b.preferred) return -1;
+    if (!a.preferred && b.preferred) return 1;
+    return 0;
+  });
+};
+
+/**
+ * Get the traditional/preferred pasuk for a given name
+ * This retrieves the verse that is traditionally used for the minhag of saying a pasuk for one's name
+ *
+ * @param startLetter - First letter of the name
+ * @param endLetter - Last letter of the name
+ * @returns The preferred verse if one exists, otherwise null
+ *
+ * @example
+ * ```ts
+ * // Get the preferred verse for "David" (דוד)
+ * const verse = getPreferredPasukForName("ד", "ד");
+ * if (verse) {
+ *   console.log(`${verse.book} ${verse.chapter}:${verse.verse}`);
+ *   console.log(verse.text);
+ * }
+ * ```
+ */
+export const getPreferredPasukForName = (
+  startLetter: string,
+  endLetter: string
+): VerseResult | null => {
+  // Normalize the letters
+  const normalizedStart = normalizeLetter(extractHebrewLetters(startLetter, false)[0] || '');
+  const normalizedEnd = normalizeLetter(extractHebrewLetters(endLetter, false)[0] || '');
+
+  if (!normalizedStart || !normalizedEnd) {
+    return null;
+  }
+
+  // Get the preferred verse info
+  const preferred = getPreferredVerse(normalizedStart, normalizedEnd);
+
+  if (!preferred || !preferred.book) {
+    return null;
+  }
+
+  // Fetch the actual verse from the data
+  const verse = tanach(preferred.book, preferred.chapter, preferred.verse);
+
+  if (verse) {
+    return {
+      ...verse,
+      preferred: true
+    };
+  }
+
+  return null;
 };
 
 // Export types
 export type { Section, VerseResult, TanachData, BookMeta, Book } from './types.js';
+export type { PreferredVerse } from './preferred-verses.js';

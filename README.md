@@ -140,7 +140,47 @@ const verses = findPesukimByName("א", "ם");
 const verses = findPesukimByName("י", "ה", { books: ["Tehillim"] });
 ```
 
-**Note:** This function correctly handles Hebrew final forms (ך, ם, ן, ף, ץ) when matching end letters.
+**Note:** This function correctly handles Hebrew final forms (ך, ם, ן, ף, ץ) when matching end letters. Results are automatically sorted with preferred/traditional verses first.
+
+### `getPreferredPasukForName(startLetter: string, endLetter: string)`
+
+Get the traditional/preferred pasuk for a given name. This returns the verse from traditional lists that is commonly used for the minhag.
+
+**Parameters:**
+- `startLetter` - First letter of the name
+- `endLetter` - Last letter of the name
+
+**Returns:** `VerseResult | null` - The preferred verse with `preferred: true`, or null if none exists
+
+**Example:**
+```typescript
+// Get the traditional verse for "David" (דוד)
+const verse = getPreferredPasukForName("ד", "ד");
+if (verse) {
+  console.log(`${verse.book} ${verse.chapter}:${verse.verse}`);
+  console.log(verse.text);
+  console.log(verse.preferred); // true
+}
+
+// Get all options including the preferred one
+const allVerses = findPesukimByName("א", "א");
+const preferred = allVerses.find(v => v.preferred);
+// The preferred verse is automatically sorted first in the results
+```
+
+## Preferred Verses
+
+The library includes a curated list of traditional verses for the minhag of saying a pasuk for one's name. These verses are:
+
+- Automatically marked with `preferred: true` in search results
+- Sorted first in `findPesukimByName()` results
+- Accessible directly via `getPreferredPasukForName()`
+- Based on traditional lists used in various Jewish communities
+
+You can extend the preferred verses list by editing `scripts/preferred-verses-input.json` and running:
+```bash
+node scripts/process-preferred-verses.cjs
+```
 
 ## Types
 
@@ -152,6 +192,7 @@ interface VerseResult {
   chapter: number;
   verse: number;
   text: string;
+  preferred?: boolean;  // True if this is a traditional/preferred verse for a name
 }
 
 interface BookMeta {
