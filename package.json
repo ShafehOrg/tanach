@@ -16,6 +16,11 @@
       "import": "./dist/preferred.js",
       "require": "./dist/preferred.cjs",
       "types": "./dist/preferred.d.ts"
+    },
+    "./dynamic": {
+      "import": "./dist/dynamic.js",
+      "require": "./dist/dynamic.cjs",
+      "types": "./dist/dynamic.d.ts"
     }
   },
   "files": [
@@ -24,7 +29,8 @@
   "scripts": {
     "dev": "vite",
     "generate:preferred": "tsx scripts/generate-preferred-with-text.ts",
-    "build": "vite build && tsc --emitDeclarationOnly",
+    "generate:books": "tsx scripts/generate-book-data.ts",
+    "build": "vite build && tsc --emitDeclarationOnly && npx tsx scripts/generate-book-data.ts",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",

@@ -7,6 +7,7 @@ export default defineConfig({
       entry: {
         index: resolve(__dirname, 'src/index.ts'),
         preferred: resolve(__dirname, 'src/preferred.ts'),
+        dynamic: resolve(__dirname, 'src/dynamic.ts'),
       },
       formats: ['es', 'cjs']
     },
