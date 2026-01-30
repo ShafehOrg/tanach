@@ -6,12 +6,12 @@ Modern TypeScript library for accessing the complete Hebrew Bible (Tanach) text.
 
 ## Features
 
-- 📖 Complete Tanach text (Torah, Neviim, Kesuvim)
-- 🚀 Modern ES modules with TypeScript support
-- 📦 Optimized data format (25% smaller than original)
-- 🔍 Type-safe API
-- 🌐 Works in Node.js and browsers
-- 📝 Full test coverage
+- Complete Tanach text (Torah, Neviim, Kesuvim)
+- Modern ES modules with TypeScript support
+- Optimized data format (25% smaller than original)
+- Type-safe API
+- Works in Node.js and browsers
+- Full test coverage
 
 ## Installation
 
@@ -76,6 +76,71 @@ Array of the three main sections: `['Torah', 'Neviim', 'Kesuvim']`
 ### `torah()`, `neviim()`, `kesuvim()`
 
 Helper functions that return section names.
+
+### `extractHebrewLetters(text: string)`
+
+Extract only Hebrew letters from text, removing nekudot (vowel points) and cantillation marks.
+
+**Parameters:**
+- `text` - Hebrew text with diacritical marks
+
+**Returns:** `string` - Text with only Hebrew letters
+
+**Example:**
+```typescript
+extractHebrewLetters("בְּרֵאשִׁ֖ית"); // Returns "בראשית"
+```
+
+### `findPesukimByStartingLetter(letter: string, options?)`
+
+Find all verses that begin with a specific Hebrew letter.
+
+**Parameters:**
+- `letter` - Hebrew letter to search for (e.g., "א", "ב")
+- `options.books` - Optional array of book names to limit search
+- `options.maxResults` - Optional maximum number of results
+
+**Returns:** `VerseResult[]`
+
+**Example:**
+```typescript
+// Find all verses starting with aleph
+const verses = findPesukimByStartingLetter("א");
+
+// Find verses starting with bet in Torah books only
+const verses = findPesukimByStartingLetter("ב", {
+  books: ["Bereishit", "Shemot", "Vayikra", "Bamidbar", "Devarim"]
+});
+
+// Find first 50 verses starting with gimmel
+const verses = findPesukimByStartingLetter("ג", { maxResults: 50 });
+```
+
+### `findPesukimByName(startLetter: string, endLetter: string, options?)`
+
+Find all verses that begin with one Hebrew letter and end with another. This is commonly used for the minhag (custom) of saying a pasuk for one's name in Shemona Esre (the Amidah prayer).
+
+**Parameters:**
+- `startLetter` - Hebrew letter the verse should start with
+- `endLetter` - Hebrew letter the verse should end with
+- `options.books` - Optional array of book names to limit search
+- `options.maxResults` - Optional maximum number of results
+
+**Returns:** `VerseResult[]`
+
+**Example:**
+```typescript
+// Find verses for the name "David" (דוד - starts with dalet, ends with dalet)
+const verses = findPesukimByName("ד", "ד");
+
+// Find verses for the name "Avraham" (אברהם - starts with aleph, ends with mem)
+const verses = findPesukimByName("א", "ם");
+
+// Search only in Tehillim (Psalms)
+const verses = findPesukimByName("י", "ה", { books: ["Tehillim"] });
+```
+
+**Note:** This function correctly handles Hebrew final forms (ך, ם, ן, ף, ץ) when matching end letters.
 
 ## Types
 

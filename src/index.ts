@@ -121,5 +121,233 @@ export const getBookMeta = (book: string) => {
  */
 export const getRawData = (): TanachData => data;
 
+/**
+ * Map of Hebrew final forms to their regular counterparts
+ */
+const finalFormMap: Record<string, string> = {
+  'ך': 'כ',
+  'ם': 'מ',
+  'ן': 'נ',
+  'ף': 'פ',
+  'ץ': 'צ'
+};
+
+/**
+ * Reverse map from regular forms to final forms
+ */
+const regularToFinalMap: Record<string, string> = {
+  'כ': 'ך',
+  'מ': 'ם',
+  'נ': 'ן',
+  'פ': 'ף',
+  'צ': 'ץ'
+};
+
+/**
+ * Normalize a Hebrew letter to its regular (non-final) form
+ *
+ * @param letter - Hebrew letter (possibly in final form)
+ * @returns Regular form of the letter
+ *
+ * @example
+ * ```ts
+ * normalizeHebrewLetter("ם"); // Returns "מ"
+ * normalizeHebrewLetter("מ"); // Returns "מ"
+ * normalizeHebrewLetter("א"); // Returns "א"
+ * ```
+ */
+export const normalizeHebrewLetter = (letter: string): string => {
+  return finalFormMap[letter] || letter;
+};
+
+/**
+ * Get all forms (regular and final) of a Hebrew letter
+ *
+ * @param letter - Hebrew letter in any form
+ * @returns Array containing all forms of the letter
+ *
+ * @example
+ * ```ts
+ * getAllLetterForms("מ"); // Returns ["מ", "ם"]
+ * getAllLetterForms("ם"); // Returns ["מ", "ם"]
+ * getAllLetterForms("א"); // Returns ["א"]
+ * ```
+ */
+export const getAllLetterForms = (letter: string): string[] => {
+  const normalized = normalizeHebrewLetter(letter);
+  const finalForm = regularToFinalMap[normalized];
+  return finalForm ? [normalized, finalForm] : [normalized];
+};
+
+/**
+ * Extract only Hebrew letters from text, removing nekudot (vowel points) and cantillation marks
+ * Preserves spaces by default
+ *
+ * @param text - Hebrew text with diacritical marks
+ * @param preserveSpaces - Whether to preserve spaces (default: true)
+ * @returns Text with only Hebrew letters (including final forms) and optionally spaces
+ *
+ * @example
+ * ```ts
+ * extractHebrewLetters("בְּרֵאשִׁ֖ית בָּרָ֣א"); // Returns "בראשית ברא"
+ * extractHebrewLetters("בְּרֵאשִׁ֖ית בָּרָ֣א", false); // Returns "בראשיתברא"
+ * ```
+ */
+export const extractHebrewLetters = (text: string, preserveSpaces: boolean = true): string => {
+  // Hebrew letter ranges:
+  // \u0590-\u05FF: Hebrew block (includes letters and diacritical marks)
+  // \u05D0-\u05EA: Hebrew letters only (aleph to tav)
+  // This regex keeps only the Hebrew letters (base consonants including final forms)
+  if (preserveSpaces) {
+    return text.replace(/[^\u05D0-\u05EA\s]/g, '');
+  }
+  return text.replace(/[^\u05D0-\u05EA]/g, '');
+};
+
+/**
+ * Find all verses that begin with a specific Hebrew letter
+ *
+ * @param letter - Hebrew letter to search for (e.g., "א", "ב")
+ * @param options - Optional configuration
+ * @param options.books - Limit search to specific books (defaults to all books)
+ * @param options.maxResults - Maximum number of results to return (defaults to all)
+ * @returns Array of matching verses
+ *
+ * @example
+ * ```ts
+ * // Find all verses starting with aleph
+ * const verses = findPesukimByStartingLetter("א");
+ *
+ * // Find verses starting with bet in Torah books only
+ * const verses = findPesukimByStartingLetter("ב", {
+ *   books: ["Bereishit", "Shemot", "Vayikra", "Bamidbar", "Devarim"]
+ * });
+ *
+ * // Find first 50 verses starting with gimmel
+ * const verses = findPesukimByStartingLetter("ג", { maxResults: 50 });
+ * ```
+ */
+export const findPesukimByStartingLetter = (
+  letter: string,
+  options?: { books?: string[]; maxResults?: number }
+): VerseResult[] => {
+  const results: VerseResult[] = [];
+  const booksToSearch = options?.books ?? getBooks();
+  const maxResults = options?.maxResults;
+
+  // Extract just the letter without any diacritical marks and normalize to regular form
+  // (final forms don't appear at the start of words)
+  const extractedLetter = extractHebrewLetters(letter, false)[0];
+  if (!extractedLetter) {
+    return results;
+  }
+  const searchLetter = normalizeHebrewLetter(extractedLetter);
+
+  for (const bookName of booksToSearch) {
+    const bookData = data[bookName];
+    if (!bookData) continue;
+
+    for (const [chapterNum, verses] of Object.entries(bookData.chapters)) {
+      for (const [verseNum, text] of verses) {
+        const firstLetter = normalizeHebrewLetter(extractHebrewLetters(text, false)[0]);
+
+        if (firstLetter === searchLetter) {
+          results.push({
+            book: bookName,
+            bookHebrew: bookData.meta.he,
+            bookEnglish: bookData.meta.en,
+            chapter: Number(chapterNum),
+            verse: verseNum,
+            text
+          });
+
+          if (maxResults && results.length >= maxResults) {
+            return results;
+          }
+        }
+      }
+    }
+  }
+
+  return results;
+};
+
+/**
+ * Find all verses that begin with one Hebrew letter and end with another
+ * This is commonly used for the minhag of saying a pasuk for one's name in Shemona Esre
+ *
+ * @param startLetter - Hebrew letter the verse should start with (e.g., "ד" for David)
+ * @param endLetter - Hebrew letter the verse should end with (e.g., "ד" for David)
+ * @param options - Optional configuration
+ * @param options.books - Limit search to specific books (defaults to all books)
+ * @param options.maxResults - Maximum number of results to return (defaults to all)
+ * @returns Array of matching verses
+ *
+ * @example
+ * ```ts
+ * // Find verses for the name "David" (דוד - starts with dalet, ends with dalet)
+ * const verses = findPesukimByName("ד", "ד");
+ *
+ * // Find verses for the name "Avraham" (אברהם - starts with aleph, ends with mem)
+ * const verses = findPesukimByName("א", "ם");
+ *
+ * // Search only in Tehillim (Psalms)
+ * const verses = findPesukimByName("י", "ה", { books: ["Tehillim"] });
+ * ```
+ */
+export const findPesukimByName = (
+  startLetter: string,
+  endLetter: string,
+  options?: { books?: string[]; maxResults?: number }
+): VerseResult[] => {
+  const results: VerseResult[] = [];
+  const booksToSearch = options?.books ?? getBooks();
+  const maxResults = options?.maxResults;
+
+  // Extract just the letters without any diacritical marks
+  const extractedStartLetter = extractHebrewLetters(startLetter, false)[0];
+  const extractedEndLetter = extractHebrewLetters(endLetter, false)[0];
+
+  if (!extractedStartLetter || !extractedEndLetter) {
+    return results;
+  }
+
+  // Normalize start letter (final forms don't appear at the start)
+  const searchStartLetter = normalizeHebrewLetter(extractedStartLetter);
+
+  // For end letter, get all forms (regular and final)
+  const endLetterAlternatives = getAllLetterForms(extractedEndLetter);
+
+  for (const bookName of booksToSearch) {
+    const bookData = data[bookName];
+    if (!bookData) continue;
+
+    for (const [chapterNum, verses] of Object.entries(bookData.chapters)) {
+      for (const [verseNum, text] of verses) {
+        const lettersOnly = extractHebrewLetters(text, false);
+        const firstLetter = normalizeHebrewLetter(lettersOnly[0]);
+        const lastLetter = lettersOnly[lettersOnly.length - 1];
+
+        if (firstLetter === searchStartLetter && endLetterAlternatives.includes(lastLetter)) {
+          results.push({
+            book: bookName,
+            bookHebrew: bookData.meta.he,
+            bookEnglish: bookData.meta.en,
+            chapter: Number(chapterNum),
+            verse: verseNum,
+            text
+          });
+
+          if (maxResults && results.length >= maxResults) {
+            return results;
+          }
+        }
+      }
+    }
+  }
+
+  return results;
+};
+
 // Export types
 export type { Section, VerseResult, TanachData, BookMeta, Book } from './types.js';

@@ -71,7 +71,7 @@ const oldSize = fs.statSync(path.join(__dirname, '../tanach.js')).size;
 const newSize = fs.statSync(outputPath).size;
 const reduction = ((1 - newSize / oldSize) * 100).toFixed(1);
 
-console.log(`✓ Conversion complete!`);
+console.log(`Conversion complete!`);
 console.log(`  Old size: ${(oldSize / 1024 / 1024).toFixed(2)} MB`);
 console.log(`  New size: ${(newSize / 1024 / 1024).toFixed(2)} MB`);
 console.log(`  Reduction: ${reduction}%`);
