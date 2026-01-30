@@ -125,8 +125,16 @@ const preferredVerses = [];
 let successCount = 0;
 let failCount = 0;
 
-data.allPesukim.forEach(item => {
-  const [letterCombo, [hebrewText, reference]] = Object.entries(item)[0];
+// Handle both old array format and new object format
+const pesukim = Array.isArray(data.allPesukim)
+  ? data.allPesukim.reduce((acc, item) => {
+      const [key, value] = Object.entries(item)[0];
+      acc[key] = Array.isArray(value) ? value[1] : value; // Extract reference from [text, ref] or use directly
+      return acc;
+    }, {})
+  : data.allPesukim;
+
+Object.entries(pesukim).forEach(([letterCombo, reference]) => {
   const [startLetter, endLetter] = letterCombo.split('-');
 
   const parsed = parseVerseReference(reference);
@@ -136,7 +144,6 @@ data.allPesukim.forEach(item => {
       startLetter,
       endLetter,
       ...parsed,
-      text: hebrewText || undefined,
     });
     successCount++;
   } else {
@@ -173,8 +180,6 @@ export interface PreferredVerse {
   chapter: number;
   /** Verse number */
   verse: number;
-  /** Hebrew text of the verse (if available) */
-  text?: string;
   /** Notes or alternative information */
   notes?: string;
 }

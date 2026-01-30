@@ -10,34 +10,28 @@ The library currently has **22 letter combinations** with preferred verses as a 
 
 ### Step 1: Prepare the JSON Data
 
-Edit `scripts/preferred-verses-input.json` with the complete list of preferred verses. The format should be:
+Edit `scripts/preferred-verses-input.json` with the complete list of preferred verses. The format is simple - just map letter combinations to verse references:
 
 ```json
 {
-  "allPesukim": [
-    {
-      "letter-combo": ["Hebrew verse text", "Book reference"]
-    }
-  ]
+  "allPesukim": {
+    "letter-combo": "Book reference"
+  }
 }
 ```
 
 **Example:**
 ```json
 {
-  "allPesukim": [
-    {
-      "א-א": ["אָנָּא יְהֹוָה הוֹשִׁיעָה נָּא", "תהילים קיח כה"]
-    },
-    {
-      "א-ב": ["אַתָּה הוּא מַלְכִּי אֱלֹהִים", "Psalms 44 5"]
-    },
-    {
-      "ב-ב": ["בִּנְדָבָה אֶזְבְּחָה לָּךְ", "תהילים נד ח"]
-    }
-  ]
+  "allPesukim": {
+    "א-א": "תהילים קיח כה",
+    "א-ב": "Psalms 44 5",
+    "ב-ב": "תהילים נד ח"
+  }
 }
 ```
+
+**Note:** The verse text itself is NOT stored in the JSON - it will be fetched from the tanach data automatically. This keeps the file small and maintains a single source of truth.
 
 ### Supported Reference Formats
 

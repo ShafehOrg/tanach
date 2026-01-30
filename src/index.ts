@@ -1,6 +1,6 @@
 import { data } from './data.js';
 import type { Section, VerseResult, TanachData } from './types.js';
-import { getPreferredVerse, normalizeHebrewLetter as normalizeLetter } from './preferred-verses.js';
+import { getPreferredVerse } from './preferred-verses.js';
 
 /**
  * The three main sections of the Tanach
@@ -320,7 +320,7 @@ export const findPesukimByName = (
   const endLetterAlternatives = getAllLetterForms(extractedEndLetter);
 
   // Get preferred verse for this letter combination
-  const preferred = getPreferredVerse(searchStartLetter, normalizeLetter(extractedEndLetter));
+  const preferred = getPreferredVerse(searchStartLetter, normalizeHebrewLetter(extractedEndLetter));
 
   for (const bookName of booksToSearch) {
     const bookData = data[bookName];
@@ -388,8 +388,8 @@ export const getPreferredPasukForName = (
   endLetter: string
 ): VerseResult | null => {
   // Normalize the letters
-  const normalizedStart = normalizeLetter(extractHebrewLetters(startLetter, false)[0] || '');
-  const normalizedEnd = normalizeLetter(extractHebrewLetters(endLetter, false)[0] || '');
+  const normalizedStart = normalizeHebrewLetter(extractHebrewLetters(startLetter, false)[0] || '');
+  const normalizedEnd = normalizeHebrewLetter(extractHebrewLetters(endLetter, false)[0] || '');
 
   if (!normalizedStart || !normalizedEnd) {
     return null;

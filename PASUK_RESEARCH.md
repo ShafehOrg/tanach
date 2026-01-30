@@ -180,21 +180,18 @@ Psalm 119 is the longest chapter in the Bible and features a unique alphabetic a
 To extend the preferred verses database:
 
 1. Edit `scripts/preferred-verses-input.json` to add new letter combinations
-2. Use format: `"א-א": ["verse text", "Book chapter verse"]`
+2. Use format: `"א-א": "Book chapter verse"` (reference only, no verse text)
 3. Run `node scripts/process-preferred-verses.cjs` to regenerate the TypeScript data
 4. The system automatically parses Hebrew numbers and book names
+5. Verse text is fetched from the tanach data automatically
 
 Example:
 ```json
 {
-  "allPesukim": [
-    {
-      "א-א": ["אָנָּא יְהֹוָה הוֹשִׁיעָה נָּא", "תהילים קיח כה"]
-    },
-    {
-      "ב-ב": ["בִּנְדָבָה אֶזְבְּחָה לָּךְ", "Psalms 54 8"]
-    }
-  ]
+  "allPesukim": {
+    "א-א": "תהילים קיח כה",
+    "ב-ב": "Psalms 54 8"
+  }
 }
 ```
 

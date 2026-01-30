@@ -16,8 +16,6 @@ export interface PreferredVerse {
   chapter: number;
   /** Verse number */
   verse: number;
-  /** Hebrew text of the verse (if available) */
-  text?: string;
   /** Notes or alternative information */
   notes?: string;
 }
@@ -32,176 +30,154 @@ export const preferredVerses: PreferredVerse[] = [
     "endLetter": "א",
     "book": "Tehillim",
     "chapter": 118,
-    "verse": 25,
-    "text": "אָנָּא יְהֹוָה הוֹשִׁיעָה נָּא אָנָּא יְהֹוָה הַצְלִיחָה נָּא"
+    "verse": 25
   },
   {
     "startLetter": "א",
     "endLetter": "ב",
     "book": "Tehillim",
     "chapter": 44,
-    "verse": 5,
-    "text": "אַתָּה הוּא מַלְכִּי אֱלֹהִים צַוֵּה יְשׁוּעוֹת יַעֲקֹב"
+    "verse": 5
   },
   {
     "startLetter": "א",
     "endLetter": "ג",
     "book": "Tehillim",
     "chapter": 42,
-    "verse": 5,
-    "text": "אֵלֶּה אֶזְכְּרָה וְאֶשְׁפְּכָה עָלַי נַפְשִׁי כִּי אֶעֱבֹר בַּסָּךְ אֶדַּדֵּם עַד בֵּית אֱלֹהִים בְּקוֹל רִנָּה וְתוֹדָה הָמוֹן חוֹגֵג"
+    "verse": 5
   },
   {
     "startLetter": "א",
     "endLetter": "ד",
     "book": "Tehillim",
     "chapter": 45,
-    "verse": 18,
-    "text": "אַזְכִּירָה שִׁמְךָ בְּכָל דֹּר וָדֹר עַל כֵּן עַמִּים יְהוֹדֻךָ לְעֹלָם וָעֶד"
+    "verse": 18
   },
   {
     "startLetter": "א",
     "endLetter": "ה",
     "book": "Tehillim",
     "chapter": 41,
-    "verse": 2,
-    "text": "אַשְׁרֵי מַשְׂכִּיל אֶל דָּל בְּיוֹם רָעָה יְמַלְּטֵהוּ יְהוָה"
+    "verse": 2
   },
   {
     "startLetter": "א",
     "endLetter": "ו",
     "book": "Tehillim",
     "chapter": 146,
-    "verse": 5,
-    "text": "אַשְׁרֵי שֶׁאֵל יַעֲקֹב בְּעֶזְרוֹ שִׂבְרוֹ עַל יְהֹוָה אֱלֹהָיו"
+    "verse": 5
   },
   {
     "startLetter": "א",
     "endLetter": "ז",
     "book": "Shir Hashirim",
     "chapter": 8,
-    "verse": 9,
-    "text": "אִם חוֹמָה הִיא נִבְנֶה עָלֶיהָ טִירַת כָּסֶף וְאִם דֶּלֶת הִיא נָצוּר עָלֶיהָ לוּחַ אָרֶז"
+    "verse": 9
   },
   {
     "startLetter": "א",
     "endLetter": "ח",
     "book": "Tehillim",
     "chapter": 118,
-    "verse": 27,
-    "text": "אֵל יְהֹוָה וַיָּאֶר לָנוּ אִסְרוּ חַג בַּעֲבֹתִים עַד קַרְנוֹת הַמִּזְבֵּחַ"
+    "verse": 27
   },
   {
     "startLetter": "א",
     "endLetter": "ט",
     "book": "Tehillim",
     "chapter": 62,
-    "verse": 7,
-    "text": "אַךְ הוּא צוּרִי וִישׁוּעָתִי מִשְׂגַּבִּי לֹא אֶמּוֹט רַבָּה"
+    "verse": 7
   },
   {
     "startLetter": "א",
     "endLetter": "י",
     "book": "Tehillim",
     "chapter": 5,
-    "verse": 2,
-    "text": "אֲמָרַי הַאֲזִינָה יְהוָה בִּינָה הֲגִיגִי"
+    "verse": 2
   },
   {
     "startLetter": "א",
     "endLetter": "ך",
     "book": "Tehillim",
     "chapter": 16,
-    "verse": 2,
-    "text": "אָמַרְתְּ לַיהוָה אֲדֹנָי אָתָּה טוֹבָתִי בַּל עָלֶיךָ"
+    "verse": 2
   },
   {
     "startLetter": "א",
     "endLetter": "ל",
     "book": "Tehillim",
     "chapter": 68,
-    "verse": 9,
-    "text": "אֶרֶץ רָעָשָׁה אַף שָׁמַיִם נָטְפוּ מִפְּנֵי אֱלֹהִים זֶה סִינַי מִפְּנֵי אֱלֹהִים אֱלֹהֵי יִשְׂרָאֵל"
+    "verse": 9
   },
   {
     "startLetter": "א",
     "endLetter": "ם",
     "book": "Nechemiah",
     "chapter": 9,
-    "verse": 7,
-    "text": "אַתָּה הוּא יְהוָה הָאֱלֹהִים אֲשֶׁר בָּחַרְתָּ בְּאַבְרָם וְהוֹצֵאתוֹ מֵאוּר כַּשְׂדִּים וְשַׂמְתָּ  שְּׁמוֹ אַבְרָהָם"
+    "verse": 7
   },
   {
     "startLetter": "א",
     "endLetter": "ן",
     "book": "Tehillim",
     "chapter": 30,
-    "verse": 9,
-    "text": "אֵלֶיךָ יְהֹוָה אֶקְרָא וְאֶל אֲדֹנָי אֶתְחַנָּן"
+    "verse": 9
   },
   {
     "startLetter": "א",
     "endLetter": "ס",
     "book": "Tehillim",
     "chapter": 27,
-    "verse": 12,
-    "text": "אַל תִּתְּנֵנִי בְּנֶפֶשׁ צָרָי כִּי קָמוּ בִי עֵדֵי שֶׁקֶר וִיפֵחַ חָמָס"
+    "verse": 12
   },
   {
     "startLetter": "א",
     "endLetter": "ע",
     "book": "Tehillim",
     "chapter": 10,
-    "verse": 6,
-    "text": "אָמַר בְּלִבּוֹ בַּל אֶמּוֹט לְדֹר וָדֹר אֲשֶׁר לֹא בְרָע"
+    "verse": 6
   },
   {
     "startLetter": "א",
     "endLetter": "ף",
     "book": "Tehillim",
     "chapter": 85,
-    "verse": 12,
-    "text": "אֱמֶת מֵאֶרֶץ תִּצְמָח וְצֶדֶק מִשָּׁמַיִם נִשְׁקָף"
+    "verse": 12
   },
   {
     "startLetter": "א",
     "endLetter": "ץ",
     "book": "Tehillim",
     "chapter": 33,
-    "verse": 5,
-    "text": "אֹהֵב צְדָקָה וּמִשְׁפָּט חֶסֶד יְהֹוָה מָלְאָה הָאָרֶץ"
+    "verse": 5
   },
   {
     "startLetter": "א",
     "endLetter": "ק",
     "book": "Tehillim",
     "chapter": 105,
-    "verse": 9,
-    "text": "אֲשֶׁר כָּרַת אֶת אַבְרָהָם וּשְׁבוּעָתוֹ לְיִשְׂחָק"
+    "verse": 9
   },
   {
     "startLetter": "א",
     "endLetter": "ר",
     "book": "Tehillim",
     "chapter": 20,
-    "verse": 8,
-    "text": "אֵלֶּה בָרֶכֶב וְאֵלֶּה בַסּוּסִים וַאֲנַחְנוּ בְּשֵׁם יְהֹוָה אֱלֹהֵינוּ נַזְכִּיר"
+    "verse": 8
   },
   {
     "startLetter": "א",
     "endLetter": "ש",
     "book": "Tehillim",
     "chapter": 55,
-    "verse": 15,
-    "text": "אֲשֶׁר יַחְדָּו נַמְתִּיק סוֹד בְּבֵית אֱלֹהִים נְהַלֵּךְ בְּרָגֶשׁ"
+    "verse": 15
   },
   {
     "startLetter": "א",
     "endLetter": "ת",
     "book": "Tehillim",
     "chapter": 106,
-    "verse": 3,
-    "text": "אַשְׁרֵי שֹׁמְרֵי מִשְׁפָּט עֹשֵׂה צְדָקָה בְכָל עֵת"
+    "verse": 3
   }
 ];
 
@@ -231,19 +207,4 @@ preferredVerses.forEach(verse => {
 export function getPreferredVerse(startLetter: string, endLetter: string): PreferredVerse | undefined {
   const key = getPreferredVerseKey(startLetter, endLetter);
   return preferredVersesMap.get(key);
-}
-
-/**
- * Normalize a Hebrew letter by converting final forms to regular forms
- */
-export function normalizeHebrewLetter(letter: string): string {
-  const finalToRegularMap: Record<string, string> = {
-    'ך': 'כ',
-    'ם': 'מ',
-    'ן': 'נ',
-    'ף': 'פ',
-    'ץ': 'צ'
-  };
-
-  return finalToRegularMap[letter] || letter;
 }
