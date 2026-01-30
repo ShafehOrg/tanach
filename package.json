@@ -3,14 +3,19 @@
   "version": "0.2.1",
   "description": "Modern TypeScript API for accessing the complete Hebrew Bible (Tanach) text",
   "type": "module",
-  "main": "./dist/tanach.cjs.js",
-  "module": "./dist/tanach.es.js",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/tanach.es.js",
-      "require": "./dist/tanach.cjs.js",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
       "types": "./dist/index.d.ts"
+    },
+    "./preferred": {
+      "import": "./dist/preferred.js",
+      "require": "./dist/preferred.cjs",
+      "types": "./dist/preferred.d.ts"
     }
   },
   "files": [
@@ -18,7 +23,8 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "generate:preferred": "tsx scripts/generate-preferred-with-text.ts",
+    "build": "vite build && tsc --emitDeclarationOnly",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",

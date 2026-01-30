@@ -3227,10 +3227,28 @@ export const preferredVerses: PreferredVerse[] = [
 ];
 
 /**
- * Create a lookup key for a letter combination
+ * Map of Hebrew final forms to their regular counterparts
+ */
+const finalFormMap: Record<string, string> = {
+  'ך': 'כ',
+  'ם': 'מ',
+  'ן': 'נ',
+  'ף': 'פ',
+  'ץ': 'צ'
+};
+
+/**
+ * Normalize a Hebrew letter to its regular (non-final) form
+ */
+function normalizeLetter(letter: string): string {
+  return finalFormMap[letter] || letter;
+}
+
+/**
+ * Create a lookup key for a letter combination (normalizes final forms)
  */
 export function getPreferredVerseKey(startLetter: string, endLetter: string): string {
-  return `${startLetter}-${endLetter}`;
+  return `${normalizeLetter(startLetter)}-${normalizeLetter(endLetter)}`;
 }
 
 /**

@@ -4,9 +4,10 @@ import { resolve } from 'path';
 export default defineConfig({
   build: {
     lib: {
-      entry: resolve(__dirname, 'src/index.ts'),
-      name: 'Tanach',
-      fileName: (format) => `tanach.${format}.js`,
+      entry: {
+        index: resolve(__dirname, 'src/index.ts'),
+        preferred: resolve(__dirname, 'src/preferred.ts'),
+      },
       formats: ['es', 'cjs']
     },
     rollupOptions: {
