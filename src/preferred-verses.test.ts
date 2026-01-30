@@ -109,8 +109,9 @@ describe('Preferred Verses', () => {
       expect(getPreferredVerseKey('א', 'ב')).toBe('א-ב');
     });
 
-    it('handles final form letters', () => {
-      expect(getPreferredVerseKey('א', 'ם')).toBe('א-ם');
+    it('normalizes final form letters', () => {
+      expect(getPreferredVerseKey('א', 'ם')).toBe('א-מ');
+      expect(getPreferredVerseKey('א', 'ך')).toBe('א-כ');
     });
 
     it('handles same letter for start and end', () => {
