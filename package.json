@@ -1,6 +1,6 @@
 {
   "name": "@shafeh/tanach",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Modern TypeScript API for accessing the complete Hebrew Bible (Tanach) text",
   "type": "module",
   "main": "./dist/tanach.cjs.js",

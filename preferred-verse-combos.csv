@@ -1,0 +1,507 @@
+start,end,count,has_preferred,preferred_book,preferred_ref
+א,א,43,yes,Tehillim,Tehillim 118:25
+א,ב,34,yes,Tehillim,Tehillim 44:5
+א,ג,2,yes,Tehillim,Tehillim 42:5
+א,ד,33,yes,Tehillim,Tehillim 45:18
+א,ה,257,yes,Tehillim,Tehillim 41:2
+א,ו,234,yes,Tehillim,Tehillim 146:5
+א,ז,5,yes,Shir Hashirim,Shir Hashirim 8:9
+א,ח,19,yes,Tehillim,Tehillim 118:27
+א,ט,5,yes,Tehillim,Tehillim 62:7
+א,י,171,yes,Tehillim,Tehillim 5:2
+א,ך,135,yes,Tehillim,Tehillim 16:2
+א,ל,57,yes,Tehillim,Tehillim 68:9
+א,ם,297,yes,Nechemiah,Nechemiah 9:7
+א,ן,92,yes,Tehillim,Tehillim 30:9
+א,ס,4,yes,Tehillim,Tehillim 27:12
+א,ע,41,yes,Tehillim,Tehillim 10:6
+א,ף,15,yes,Tehillim,Tehillim 85:12
+א,פ,15,no,,
+א,ץ,22,yes,Tehillim,Tehillim 33:5
+א,ק,7,yes,Tehillim,Tehillim 105:9
+א,ר,68,yes,Tehillim,Tehillim 20:8
+א,ש,21,yes,Tehillim,Tehillim 55:15
+א,ת,69,yes,Tehillim,Tehillim 106:3
+ב,א,34,yes,Tehillim,Tehillim 115:10
+ב,ב,19,yes,Tehillim,Tehillim 54:8
+ב,ג,1,yes,Divrei Hayamim I,Divrei Hayamim I 11:22
+ב,ד,15,yes,Tehillim,Tehillim 78:13
+ב,ה,236,yes,Tehillim,Tehillim 105:45
+ב,ו,126,yes,Tehillim,Tehillim 103:2
+ב,ז,2,yes,Tehillim,Tehillim 138:3
+ב,ח,11,yes,Mishlei,Mishlei 14:11
+ב,ט,3,yes,Mishlei,Mishlei 8:20
+ב,י,83,yes,Tehillim,Tehillim 23:2
+ב,ך,63,yes,Tehillim,Tehillim 119:12
+ב,ל,38,yes,Tehillim,Tehillim 68:27
+ב,ם,169,yes,Tehillim,Tehillim 71:1
+ב,ן,49,yes,Tehillim,Tehillim 41:14
+ב,ס,6,yes,Tehillim,Tehillim 147:2
+ב,ע,8,yes,Mishlei,Mishlei 16:6
+ב,ף,5,yes,Iyov,Iyov 34:32
+ב,פ,5,no,,
+ב,ץ,15,yes,Tehillim,Tehillim 115:15
+ב,ק,12,yes,Mishlei,Mishlei 8:15
+ב,ר,61,yes,Tehillim,Tehillim 45:10
+ב,ש,19,yes,Mishlei,Mishlei 16:15
+ב,ת,36,yes,Tehillim,Tehillim 104:1
+ג,א,3,yes,Iyov,Iyov 13:16
+ג,ב,8,yes,Tehillim,Tehillim 19:12
+ג,ג,0,yes,Tehillim,Tehillim 119:67
+ג,ד,3,yes,Mishlei,Mishlei 29:23
+ג,ה,27,yes,Tehillim,Tehillim 37:5
+ג,ו,21,yes,Tehillim,Tehillim 34:4
+ג,ז,0,yes,Tehillim,Tehillim 72:6
+ג,ח,2,yes,Mishlei,Mishlei 24:5
+ג,ט,0,no,,
+ג,י,20,yes,Tehillim,Tehillim 119:24
+ג,ך,15,yes,Tehillim,Tehillim 119:18
+ג,ל,8,yes,Tehillim,Tehillim 71:22
+ג,ם,30,yes,Tehillim,Tehillim 111:2
+ג,ן,7,yes,Tehillim,Tehillim 49:3
+ג,ס,0,no,,
+ג,ע,2,yes,Iyov,Iyov 11:8
+ג,ף,2,yes,Mishlei,Mishlei 19:19
+ג,פ,2,no,,
+ג,ץ,5,yes,Tehillim,Tehillim 104:9
+ג,ק,2,yes,Yeshayahu,Yeshayahu 50:6
+ג,ר,8,yes,Tehillim,Tehillim 145:3
+ג,ש,3,yes,Shmuel II,Shmuel II 8:11
+ג,ת,10,yes,Tehillim,Tehillim 119:20
+ד,א,6,yes,Daniel,Daniel 2:36
+ד,ב,3,yes,Yeshayahu,Yeshayahu 55:6
+ד,ג,0,yes,Yonah,Yonah 2:11
+ד,ד,4,yes,Tehillim,Tehillim 105:4
+ד,ה,25,yes,Mishlei,Mishlei 12:25
+ד,ו,17,yes,Tehillim,Tehillim 145:4
+ד,ז,0,no,,
+ד,ח,0,yes,Yeshayahu,Yeshayahu 54:12
+ד,ט,0,no,,
+ד,י,18,yes,Tehillim,Tehillim 119:30
+ד,ך,11,yes,Tehillim,Tehillim 63:9
+ד,ל,7,yes,Bereishit,Bereishit 49:16
+ד,ם,28,yes,Mishlei,Mishlei 3:17
+ד,ן,7,yes,Bamidbar,Bamidbar 33:51
+ד,ס,0,yes,Shir Hashirim,Shir Hashirim 4:13
+ד,ע,0,yes,Tehillim,Tehillim 139:23
+ד,ף,2,yes,Iyov,Iyov 19:6
+ד,פ,2,no,,
+ד,ץ,4,yes,Mishlei,Mishlei 30:12
+ד,ק,0,yes,Shemot,Shemot 16:14
+ד,ר,6,yes,Shemot,Shemot 1:4
+ד,ש,2,yes,Vayikra,Vayikra 23:24
+ד,ת,10,yes,Tehillim,Tehillim 37:7
+ה,א,22,yes,Devarim,Devarim 32:4
+ה,ב,23,yes,Tehillim,Tehillim 119:34
+ה,ג,2,yes,Iyov,Iyov 6:16
+ה,ד,33,yes,Tehillim,Tehillim 111:3
+ה,ה,205,yes,Tehillim,Tehillim 30:12
+ה,ו,187,yes,Tehillim,Tehillim 107:1
+ה,ז,3,yes,Tehillim,Tehillim 97:7
+ה,ח,9,yes,Tehillim,Tehillim 104:3
+ה,ט,13,yes,Tehillim,Tehillim 94:9
+ה,י,96,yes,Tehillim,Tehillim 119:35
+ה,ך,78,yes,Tehillim,Tehillim 86:11
+ה,ל,56,yes,Tehillim,Tehillim 5:3
+ה,ם,162,yes,Tehillim,Tehillim 126:3
+ה,ן,39,yes,Tehillim,Tehillim 127:3
+ה,ס,4,yes,Tehillim,Tehillim 74:20
+ה,ע,22,yes,Tehillim,Tehillim 19:2
+ה,ף,19,yes,Tehillim,Tehillim 148:10
+ה,פ,19,no,,
+ה,ץ,22,yes,Tehillim,Tehillim 96:9
+ה,ק,12,yes,Tehillim,Tehillim 55:23
+ה,ר,77,yes,Tehillim,Tehillim 148:3
+ה,ש,14,yes,Tehillim,Tehillim 29:2
+ה,ת,48,yes,Tehillim,Tehillim 148:7
+ו,א,285,yes,Tehillim,Tehillim 80:19
+ו,ב,335,yes,Tehillim,Tehillim 78:10
+ו,ג,16,yes,Yeshayahu,Yeshayahu 14:30
+ו,ד,369,yes,Tehillim,Tehillim 52:10
+ו,ה,2487,yes,Tehillim,Tehillim 9:11
+ו,ו,1660,yes,Tehillim,Tehillim 35:9
+ו,ז,25,yes,Melachim I,Melachim I 7:11
+ו,ח,121,yes,Tehillim,Tehillim 1:3
+ו,ט,60,yes,Bamidbar,Bamidbar 29:18
+ו,י,720,yes,Tehillim,Tehillim 13:6
+ו,ך,626,yes,Tehillim,Tehillim 69:14
+ו,ל,644,yes,Tehillim,Tehillim 22:4
+ו,ם,2447,yes,Tehillim,Tehillim 41:11
+ו,ן,586,yes,Tehillim,Tehillim 72:19
+ו,ס,31,yes,Tehillim,Tehillim 69:32
+ו,ע,104,yes,Yechezkel,Yechezkel 3:10
+ו,ף,102,yes,Tehillim,Tehillim 89:24
+ו,פ,102,no,,
+ו,ץ,159,yes,Tehillim,Tehillim 83:19
+ו,ק,59,yes,Malachi,Malachi 3:20
+ו,ר,833,yes,Bereishit,Bereishit 1:3
+ו,ש,196,yes,Bereishit,Bereishit 27:28
+ו,ת,721,yes,Tehillim,Tehillim 86:15
+ז,א,1,yes,Bamidbar,Bamidbar 4:24
+ז,ב,8,yes,Mishlei,Mishlei 10:7
+ז,ג,0,yes,Bamidbar,Bamidbar 6:4
+ז,ד,3,yes,Bamidbar,Bamidbar 8:24
+ז,ה,27,yes,Tehillim,Tehillim 132:14
+ז,ו,39,yes,Tehillim,Tehillim 118:20
+ז,ז,1,yes,Yeshayahu,Yeshayahu 16:13
+ז,ח,1,yes,Tehillim,Tehillim 143:5
+ז,ט,1,yes,Kohelet,Kohelet 10:1
+ז,י,17,yes,Tehillim,Tehillim 119:56
+ז,ך,10,yes,Tehillim,Tehillim 50:14
+ז,ל,3,yes,Bamidbar,Bamidbar 19:2
+ז,ם,37,yes,Tehillim,Tehillim 50:23
+ז,ן,11,yes,Bereishit,Bereishit 49:13
+ז,ס,1,yes,Shoftim,Shoftim 1:30
+ז,ע,0,yes,Yeshayahu,Yeshayahu 11:1
+ז,ף,1,yes,Tehillim,Tehillim 90:5
+ז,פ,1,no,,
+ז,ץ,5,yes,Yeshayahu,Yeshayahu 12:5
+ז,ק,2,yes,Tehillim,Tehillim 112:4
+ז,ר,5,yes,Tehillim,Tehillim 105:8
+ז,ש,1,yes,Eichah,Eichah 3:19
+ז,ת,9,yes,Tehillim,Tehillim 40:7
+ח,א,5,yes,Yeshayahu,Yeshayahu 2:22
+ח,ב,4,yes,Yeshayahu,Yeshayahu 7:15
+ח,ג,0,yes,Shemot,Shemot 10:9
+ח,ד,4,yes,Tehillim,Tehillim 145:8
+ח,ה,26,yes,Tehillim,Tehillim 37:15
+ח,ו,28,yes,Tehillim,Tehillim 85:11
+ח,ז,1,yes,Tehillim,Tehillim 123:3
+ח,ח,1,yes,Mishlei,Mishlei 14:16
+ח,ט,4,yes,Mishlei,Mishlei 10:8
+ח,י,33,yes,Tehillim,Tehillim 89:2
+ח,ך,27,yes,Tehillim,Tehillim 119:62
+ח,ל,5,yes,Shoftim,Shoftim 5:7
+ח,ם,26,yes,Tehillim,Tehillim 34:8
+ח,ן,8,yes,Mishlei,Mishlei 12:12
+ח,ס,1,yes,Yeshayahu,Yeshayahu 34:12
+ח,ע,0,yes,Divrei Hayamim I,Divrei Hayamim I 2:35
+ח,ף,1,yes,Yeshayahu,Yeshayahu 44:12
+ח,פ,1,no,,
+ח,ץ,1,no,,
+ח,ק,1,yes,Daniel,Daniel 7:9
+ח,ר,10,yes,Mishlei,Mishlei 27:11
+ח,ש,1,yes,Kohelet,Kohelet 10:8
+ח,ת,15,yes,Tehillim,Tehillim 57:2
+ט,א,1,yes,Mishlei,Mishlei 13:22
+ט,ב,4,yes,Mishlei,Mishlei 17:1
+ט,ג,0,no,,
+ט,ד,2,yes,Kohelet,Kohelet 4:13
+ט,ה,9,yes,Tehillim,Tehillim 140:6
+ט,ו,13,yes,Tehillim,Tehillim 34:9
+ט,ז,0,no,,
+ט,ח,3,yes,Kohelet,Kohelet 7:8
+ט,ט,2,yes,Tehillim,Tehillim 112:5
+ט,י,5,yes,Tehillim,Tehillim 119:66
+ט,ך,6,yes,Tehillim,Tehillim 119:68
+ט,ל,2,yes,Mishlei,Mishlei 22:9
+ט,ם,11,yes,Tehillim,Tehillim 118:9
+ט,ן,2,yes,Tehillim,Tehillim 92:2
+ט,ס,1,yes,Mishlei,Mishlei 21:19
+ט,ע,1,yes,Mishlei,Mishlei 12:2
+ט,ף,1,yes,Tehillim,Tehillim 119:72
+ט,פ,1,no,,
+ט,ץ,0,no,,
+ט,ק,0,no,,
+ט,ר,5,yes,Mishlei,Mishlei 16:32
+ט,ש,1,yes,Kohelet,Kohelet 7:11
+ט,ת,1,yes,Mishlei,Mishlei 27:5
+י,א,11,yes,Tehillim,Tehillim 20:5
+י,ב,20,yes,Tehillim,Tehillim 20:2
+י,ג,1,yes,Tehillim,Tehillim 107:26
+י,ד,10,yes,Tehillim,Tehillim 22:27
+י,ה,87,yes,Tehillim,Tehillim 120:2
+י,ו,110,yes,Tehillim,Tehillim 19:10
+י,ז,1,yes,Mishlei,Mishlei 8:22
+י,ח,10,yes,Tehillim,Tehillim 56:4
+י,ט,4,yes,Tehillim,Tehillim 72:2
+י,י,57,yes,Tehillim,Tehillim 118:7
+י,ך,61,yes,Tehillim,Tehillim 84:13
+י,ל,24,yes,Tehillim,Tehillim 118:16
+י,ם,113,yes,Tehillim,Tehillim 149:5
+י,ן,21,yes,Tehillim,Tehillim 107:33
+י,ס,1,yes,Mishlei,Mishlei 12:24
+י,ע,11,yes,Tehillim,Tehillim 72:13
+י,ף,2,yes,Tehillim,Tehillim 138:8
+י,פ,2,no,,
+י,ץ,15,yes,Tehillim,Tehillim 67:8
+י,ק,10,yes,Tehillim,Tehillim 107:14
+י,ר,31,yes,Tehillim,Tehillim 107:2
+י,ש,8,yes,Tehillim,Tehillim 119:80
+י,ת,25,yes,Tehillim,Tehillim 130:7
+כ,א,38,yes,Tehillim,Tehillim 116:13
+כ,ב,34,yes,Tehillim,Tehillim 94:14
+כ,ג,0,no,,
+כ,ד,42,yes,Tehillim,Tehillim 33:9
+כ,ה,320,yes,Tehillim,Tehillim 117:2
+כ,ו,248,yes,Tehillim,Tehillim 100:5
+כ,ז,4,yes,Tehillim,Tehillim 21:4
+כ,ח,11,yes,Shmuel II,Shmuel II 23:5
+כ,ט,15,yes,Tehillim,Tehillim 21:8
+כ,י,121,yes,Tehillim,Tehillim 63:5
+כ,ך,113,yes,Tehillim,Tehillim 91:9
+כ,ל,69,yes,Tehillim,Tehillim 47:8
+כ,ם,296,yes,Tehillim,Tehillim 42:2
+כ,ן,46,yes,Tehillim,Tehillim 63:8
+כ,ס,2,yes,Mishlei,Mishlei 5:21
+כ,ע,23,yes,Tehillim,Tehillim 84:11
+כ,ף,13,yes,Yeshayahu,Yeshayahu 55:12
+כ,פ,13,no,,
+כ,ץ,28,yes,Tehillim,Tehillim 47:3
+כ,ק,10,yes,Tehillim,Tehillim 112:6
+כ,ר,57,yes,Tehillim,Tehillim 36:10
+כ,ש,34,yes,Zechariah,Zechariah 8:7
+כ,ת,88,yes,Tehillim,Tehillim 91:3
+ל,א,37,yes,Tehillim,Tehillim 25:1
+ל,ב,23,yes,Bereishit,Bereishit 27:9
+ל,ג,0,yes,Tehillim,Tehillim 51:9
+ל,ד,41,yes,Tehillim,Tehillim 27:1
+ל,ה,162,yes,Tehillim,Tehillim 3:9
+ל,ו,142,yes,Tehillim,Tehillim 103:1
+ל,ז,6,yes,Tehillim,Tehillim 68:34
+ל,ח,11,yes,Tehillim,Tehillim 16:9
+ל,ט,3,yes,Mishlei,Mishlei 12:3
+ל,י,83,yes,Tehillim,Tehillim 119:92
+ל,ך,76,yes,Tehillim,Tehillim 115:1
+ל,ל,50,yes,Tehillim,Tehillim 149:8
+ל,ם,175,yes,Tehillim,Tehillim 119:89
+ל,ן,31,yes,Shemot,Shemot 25:27
+ל,ס,2,no,,
+ל,ע,14,yes,Tehillim,Tehillim 101:4
+ל,ף,7,yes,Mishlei,Mishlei 10:3
+ל,פ,7,no,,
+ל,ץ,20,yes,Tehillim,Tehillim 66:1
+ל,ק,2,yes,Tehillim,Tehillim 2:1
+ל,ר,73,yes,Tehillim,Tehillim 143:10
+ל,ש,15,yes,Tehillim,Tehillim 27:8
+ל,ת,37,yes,Tehillim,Tehillim 45:1
+מ,א,19,yes,Tehillim,Tehillim 147:4
+מ,ב,19,yes,Tehillim,Tehillim 34:13
+מ,ג,0,no,,
+מ,ד,35,yes,Tehillim,Tehillim 30:1
+מ,ה,111,yes,Mishlei,Mishlei 20:18
+מ,ו,99,yes,Shir Hashirim,Shir Hashirim 5:9
+מ,ז,2,yes,Tehillim,Tehillim 29:1
+מ,ח,4,yes,Bereishit,Bereishit 10:11
+מ,ט,4,yes,Tehillim,Tehillim 82:1
+מ,י,58,yes,Tehillim,Tehillim 119:97
+מ,ך,40,yes,Tehillim,Tehillim 92:6
+מ,ל,29,yes,Bamidbar,Bamidbar 24:5
+מ,ם,99,yes,Mishlei,Mishlei 15:30
+מ,ן,32,yes,Tehillim,Tehillim 36:8
+מ,ס,4,yes,Mishlei,Mishlei 10:11
+מ,ע,17,yes,Shmuel II,Shmuel II 22:4
+מ,ף,5,yes,Mishlei,Mishlei 15:1
+מ,פ,5,no,,
+מ,ץ,16,yes,Tehillim,Tehillim 100:1
+מ,ק,4,yes,Mishlei,Mishlei 25:25
+מ,ר,26,yes,Tehillim,Tehillim 25:12
+מ,ש,10,yes,Kohelet,Kohelet 1:3
+מ,ת,28,yes,Tehillim,Tehillim 84:2
+נ,א,7,yes,Tehillim,Tehillim 33:20
+נ,ב,3,yes,Tehillim,Tehillim 119:112
+נ,ג,0,yes,Tehillim,Tehillim 37:4
+נ,ד,4,yes,Mishlei,Mishlei 27:18
+נ,ה,41,yes,Tehillim,Tehillim 24:4
+נ,ו,44,yes,Tehillim,Tehillim 23:3
+נ,ז,2,yes,Shoftim,Shoftim 5:21
+נ,ח,2,yes,Yehoshua,Yehoshua 17:10
+נ,ט,0,yes,Shemot,Shemot 39:29
+נ,י,15,yes,Tehillim,Tehillim 108:2
+נ,ך,16,yes,Tehillim,Tehillim 119:106
+נ,ל,4,yes,Tehillim,Tehillim 88:5
+נ,ם,39,yes,Tehillim,Tehillim 37:25
+נ,ן,11,yes,Tehillim,Tehillim 46:5
+נ,ס,1,yes,Shoftim,Shoftim 1:33
+נ,ע,0,yes,Tehillim,Tehillim 84:12
+נ,ף,2,yes,Tehillim,Tehillim 76:5
+נ,פ,2,no,,
+נ,ץ,5,yes,Tehillim,Tehillim 25:13
+נ,ק,2,yes,Tehillim,Tehillim 110:4
+נ,ר,9,yes,Tehillim,Tehillim 130:6
+נ,ש,1,yes,Yeshayahu,Yeshayahu 33:8
+נ,ת,7,yes,Mishlei,Mishlei 25:12
+ס,א,0,yes,Tehillim,Tehillim 132:11
+ס,ב,0,yes,Tehillim,Tehillim 71:21
+ס,ג,0,yes,Mishlei,Mishlei 22:28
+ס,ד,2,yes,Tehillim,Tehillim 119:117
+ס,ה,13,yes,Tehillim,Tehillim 48:13
+ס,ו,6,yes,Tehillim,Tehillim 34:15
+ס,ז,0,no,,
+ס,ח,0,yes,Bamidbar,Bamidbar 9:2
+ס,ט,0,no,,
+ס,י,10,yes,Tehillim,Tehillim 119:113
+ס,ך,1,yes,Tehillim,Tehillim 119:119
+ס,ל,1,yes,Shemot,Shemot 29:3
+ס,ם,11,yes,Tehillim,Tehillim 37:27
+ס,ן,2,yes,Hoshea,Hoshea 12:1
+ס,ס,0,yes,Tehillim,Tehillim 60:6
+ס,ע,1,yes,Nechemiah,Nechemiah 12:7
+ס,ף,0,yes,Tehillim,Tehillim 115:14
+ס,פ,0,no,,
+ס,ץ,1,no,,
+ס,ק,0,yes,Tehillim,Tehillim 139:8
+ס,ר,2,yes,Tehillim,Tehillim 111:8
+ס,ש,0,no,,
+ס,ת,2,yes,Kohelet,Kohelet 7:25
+ע,א,22,yes,Yeshayahu,Yeshayahu 33:10
+ע,ב,14,yes,Tehillim,Tehillim 132:5
+ע,ג,0,yes,Tehillim,Tehillim 2:4
+ע,ד,17,yes,Tehillim,Tehillim 71:6
+ע,ה,104,yes,Tehillim,Tehillim 118:14
+ע,ו,70,yes,Tehillim,Tehillim 145:15
+ע,ז,1,yes,Tehillim,Tehillim 119:127
+ע,ח,4,yes,Mishlei,Mishlei 21:3
+ע,ט,4,yes,Tehillim,Tehillim 104:4
+ע,י,45,yes,Tehillim,Tehillim 59:18
+ע,ך,40,yes,Tehillim,Tehillim 109:26
+ע,ל,23,yes,Iyov,Iyov 10:7
+ע,ם,84,yes,Tehillim,Tehillim 18:26
+ע,ן,26,yes,Tehillim,Tehillim 65:12
+ע,ס,2,yes,Yeshayahu,Yeshayahu 13:7
+ע,ע,6,yes,Tehillim,Tehillim 81:6
+ע,ף,3,yes,Shemot,Shemot 38:10
+ע,פ,3,no,,
+ע,ץ,6,yes,Tehillim,Tehillim 121:2
+ע,ק,2,yes,Devarim,Devarim 9:2
+ע,ר,37,yes,Iyov,Iyov 5:9
+ע,ש,6,yes,Mishlei,Mishlei 28:19
+ע,ת,15,yes,Shir Hashirim,Shir Hashirim 5:12
+פ,א,6,yes,Vayikra,Vayikra 2:6
+פ,ב,5,yes,Shemot,Shemot 28:34
+פ,ג,1,yes,Tehillim,Tehillim 22:14
+פ,ד,4,yes,Tehillim,Tehillim 112:9
+פ,ה,35,yes,Tehillim,Tehillim 118:19
+פ,ו,19,yes,Tehillim,Tehillim 34:23
+פ,ז,0,yes,Shir Hashirim,Shir Hashirim 5:11
+פ,ח,0,yes,Bereishit,Bereishit 2:7
+פ,ט,2,yes,Tehillim,Tehillim 37:30
+פ,י,13,yes,Tehillim,Tehillim 55:19
+פ,ך,8,yes,Tehillim,Tehillim 119:135
+פ,ל,1,yes,Tehillim,Tehillim 7:3
+פ,ם,24,yes,Tehillim,Tehillim 19:9
+פ,ן,4,yes,Tehillim,Tehillim 145:16
+פ,ס,2,yes,Mishlei,Mishlei 16:11
+פ,ע,3,yes,Yechezkel,Yechezkel 44:18
+פ,ף,1,yes,Mishlei,Mishlei 31:8
+פ,פ,1,no,,
+פ,ץ,2,yes,Tehillim,Tehillim 80:10
+פ,ק,0,yes,Mishlei,Mishlei 8:35
+פ,ר,7,yes,Tehillim,Tehillim 144:11
+פ,ש,4,no,,
+פ,ת,20,yes,Tehillim,Tehillim 71:15
+צ,א,2,yes,Mishlei,Mishlei 27:16
+צ,ב,2,yes,Tehillim,Tehillim 40:11
+צ,ג,0,yes,Bereishit,Bereishit 30:38
+צ,ד,4,yes,Tehillim,Tehillim 119:138
+צ,ה,11,yes,Yeshayahu,Yeshayahu 1:27
+צ,ו,17,yes,Tehillim,Tehillim 145:17
+צ,ז,0,no,,
+צ,ח,1,yes,Yirmiyahu,Yirmiyahu 50:5
+צ,ט,0,no,,
+צ,י,11,yes,Tehillim,Tehillim 119:143
+צ,ך,7,yes,Tehillim,Tehillim 89:15
+צ,ל,2,yes,Yeshayahu,Yeshayahu 12:6
+צ,ם,15,yes,Tehillim,Tehillim 42:3
+צ,ן,2,yes,Yehoshua,Yehoshua 4:16
+צ,ס,0,no,,
+צ,ע,1,yes,Mishlei,Mishlei 11:5
+צ,ף,0,no,,
+צ,פ,0,yes,Shemot,Shemot 37:11
+צ,ץ,2,yes,Mishlei,Mishlei 10:30
+צ,ק,1,yes,Shir Hashirim,Shir Hashirim 7:5
+צ,ר,2,yes,Devarim,Devarim 3:9
+צ,ש,1,yes,Bamidbar,Bamidbar 5:2
+צ,ת,4,yes,Tehillim,Tehillim 119:142
+ק,א,3,yes,Shemot,Shemot 13:2
+ק,ב,3,yes,Mishlei,Mishlei 19:8
+ק,ג,0,no,,
+ק,ד,5,yes,Tehillim,Tehillim 29:9
+ק,ה,41,yes,Tehillim,Tehillim 27:14
+ק,ו,20,yes,Mishlei,Mishlei 16:10
+ק,ז,0,no,,
+ק,ח,3,yes,Yeshayahu,Yeshayahu 60:1
+ק,ט,4,yes,Yeshayahu,Yeshayahu 42:3
+ק,י,16,yes,Tehillim,Tehillim 40:2
+ק,ך,13,yes,Tehillim,Tehillim 119:146
+ק,ל,7,yes,Tehillim,Tehillim 118:15
+ק,ם,24,yes,Tehillim,Tehillim 119:152
+ק,ן,9,yes,Tehillim,Tehillim 142:2
+ק,ס,0,no,,
+ק,ע,3,yes,Tehillim,Tehillim 34:19
+ק,ף,2,yes,Mishlei,Mishlei 16:16
+ק,פ,2,no,,
+ק,ץ,3,yes,Tehillim,Tehillim 77:19
+ק,ק,0,yes,Bereishit,Bereishit 49:10
+ק,ר,4,yes,Tehillim,Tehillim 29:4
+ק,ש,4,yes,Tehillim,Tehillim 29:8
+ק,ת,15,yes,Tehillim,Tehillim 119:151
+ר,א,7,yes,Tehillim,Tehillim 99:5
+ר,ב,5,yes,Shir Hashirim,Shir Hashirim 5:11
+ר,ג,0,yes,Tehillim,Tehillim 42:2
+ר,ד,9,yes,Tehillim,Tehillim 103:8
+ר,ה,42,yes,Tehillim,Tehillim 34:20
+ר,ו,31,yes,Tehillim,Tehillim 147:11
+ר,ז,1,yes,Bereishit,Bereishit 49:3
+ר,ח,3,yes,Kohelet,Kohelet 1:14
+ר,ט,2,yes,Mishlei,Mishlei 13:23
+ר,י,24,yes,Tehillim,Tehillim 119:157
+ר,ך,11,yes,Tehillim,Tehillim 57:6
+ר,ל,7,yes,Devarim,Devarim 32:39
+ר,ם,31,yes,Tehillim,Tehillim 69:33
+ר,ן,8,yes,Kohelet,Kohelet 7:27
+ר,ס,0,no,,
+ר,ע,7,yes,Mishlei,Mishlei 15:29
+ר,ף,1,yes,Tehillim,Tehillim 107:5
+ר,פ,1,no,,
+ר,ץ,2,yes,Kohelet,Kohelet 10:7
+ר,ק,1,yes,Mishlei,Mishlei 27:10
+ר,ר,8,no,,
+ר,ש,7,yes,Tehillim,Tehillim 68:25
+ר,ת,10,yes,Tehillim,Tehillim 77:17
+ש,א,8,yes,Tehillim,Tehillim 86:4
+ש,ב,9,yes,Bereishit,Bereishit 2:11
+ש,ג,3,yes,Nachum,Nachum 2:7
+ש,ד,10,yes,Tehillim,Tehillim 119:167
+ש,ה,76,yes,Shir Hashirim,Shir Hashirim 1:1
+ש,ו,65,yes,Tehillim,Tehillim 65:3
+ש,ז,0,yes,Iyov,Iyov 26:9
+ש,ח,9,yes,Tehillim,Tehillim 6:10
+ש,ט,6,yes,Tehillim,Tehillim 16:8
+ש,י,49,yes,Tehillim,Tehillim 31:7
+ש,ך,39,yes,Tehillim,Tehillim 28:2
+ש,ל,20,yes,Tehillim,Tehillim 119:165
+ש,ם,84,yes,Tehillim,Tehillim 37:37
+ש,ן,18,yes,Tehillim,Tehillim 48:14
+ש,ס,0,no,,
+ש,ע,6,yes,Tehillim,Tehillim 116:6
+ש,ף,8,yes,Tehillim,Tehillim 105:17
+ש,פ,8,no,,
+ש,ץ,8,yes,Tehillim,Tehillim 96:1
+ש,ק,3,yes,Mishlei,Mishlei 14:19
+ש,ר,25,yes,Mishlei,Mishlei 12:19
+ש,ש,5,yes,Mishlei,Mishlei 27:9
+ש,ת,32,yes,Tehillim,Tehillim 134:1
+ת,א,1,yes,Mishlei,Mishlei 16:12
+ת,ב,10,yes,Tehillim,Tehillim 141:2
+ת,ג,0,yes,Tehillim,Tehillim 32:9
+ת,ד,4,yes,Tehillim,Tehillim 145:1
+ת,ה,41,yes,Tehillim,Tehillim 23:5
+ת,ו,23,yes,Tehillim,Tehillim 102:1
+ת,ז,1,yes,Tehillim,Tehillim 31:19
+ת,ח,4,yes,Tehillim,Tehillim 16:11
+ת,ט,1,yes,Iyov,Iyov 41:22
+ת,י,26,yes,Tehillim,Tehillim 31:5
+ת,ך,20,yes,Tehillim,Tehillim 25:21
+ת,ל,4,yes,Mishlei,Mishlei 26:26
+ת,ם,28,yes,Tehillim,Tehillim 68:35
+ת,ן,10,yes,Tehillim,Tehillim 51:9
+ת,ס,0,no,,
+ת,ע,1,yes,Mishlei,Mishlei 13:19
+ת,ף,2,yes,Iyov,Iyov 14:15
+ת,פ,2,no,,
+ת,ץ,4,yes,Iyov,Iyov 37:3
+ת,ק,3,yes,Tehillim,Tehillim 119:172
+ת,ר,6,yes,Tehillim,Tehillim 90:1
+ת,ש,3,yes,Iyov,Iyov 38:14
+ת,ת,13,yes,Tehillim,Tehillim 71:23
